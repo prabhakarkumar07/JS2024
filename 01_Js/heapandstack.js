@@ -1,0 +1,1 @@
+console.log("Heap and stack");

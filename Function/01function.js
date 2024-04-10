@@ -42,13 +42,17 @@
 //   console.log(fnInside(5)); // 8
 //   console.log(outside(3)(5)); // 8
 function A(x) {
-    function B(y) {
+  console.log("x",x);//1
+     function B(y) {
+      console.log("Y",y);//2
       function C(z) {
+        console.log("z",z);
+        console.log(`x:${x},y:${y},Z:${z}`);//1,2,3
         console.log(x + y + z);
       }
       C(3);
     }
-    B(2);
+     B(2);
   }
-  A(1); // Logs 6 (which is 1 + 2 + 3)
+ console.log( A(1) );// Logs 6 (which is 1 + 2 + 3)
   
